@@ -1,0 +1,68 @@
+{
+  "name": "zEnforce-MandatoryTags",
+  "type": "Microsoft.Authorization/policySetDefinitions",
+  "properties": {
+    "policyType": "Custom",
+    "displayName": "Ensure mandatory tagging is applied to resources and resource groups",
+    "description": "Contains the core tagging policies",
+    "metadata": {
+      "version": "1.0.0",
+      "category": "Tags"
+    },
+    "parameters": {
+      "effect": {
+        "type": "String",
+        "metadata": {
+          "displayName": "effect"
+        }
+      },
+      "tagOne": {
+        "type": "String",
+        "metadata": {
+          "displayName": "tagOne"
+        }
+      },
+      "tagTwo": {
+        "type": "String",
+        "metadata": {
+          "displayName": "tagTwo"
+        }
+      }
+    },
+    "policyDefinitions": [
+      {
+        "policyDefinitionReferenceId": "Resource groups must have mandatory tagging applied",
+        "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/alz1-dev/providers/Microsoft.Authorization/policyDefinitions/zEnforce-RGTags",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('effect')]"
+          },
+          "tagOne": {
+            "value": "[parameters('tagOne')]"
+          },
+          "tagTwo": {
+            "value": "[parameters('tagTwo')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "Resources must have mandatory tagging applied",
+        "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/alz1-dev/providers/Microsoft.Authorization/policyDefinitions/zEnforce-ResourceTags",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('effect')]"
+          },
+          "tagOne": {
+            "value": "[parameters('tagOne')]"
+          },
+          "tagTwo": {
+            "value": "[parameters('tagTwo')]"
+          }
+        },
+        "groupNames": []
+      }
+    ],
+    "policyDefinitionGroups": null
+  }
+}

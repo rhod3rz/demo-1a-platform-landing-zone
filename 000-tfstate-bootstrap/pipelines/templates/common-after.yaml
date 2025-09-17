@@ -1,0 +1,18 @@
+# PER PROJECT / REPO UPDATES REQUIRED: NONE
+
+steps:
+
+#================================================================================================
+# Agent CleanUp
+#================================================================================================
+
+# Cleanup ado agent workspace.
+- script: |
+    # Delete all workspace files.
+    echo "##[command] Cleaning Workspace ..."
+    rm -rvf $(Build.SourcesDirectory)/*
+    # Required to clean up git credentials if running self hosted agents.
+    # Without this step the self hosted agent can intermittently error when running the checkout step with permission errors.
+    echo "##[command] Unsetting GIT ExtraHeader Config For dev.azure.com ..."
+    git config --global --unset http.https://dev.azure.com/.extraheader && echo "Unset" || echo "Nothing To Unset"
+  displayName: ADO Agent - Clean

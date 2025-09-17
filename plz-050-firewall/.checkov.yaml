@@ -1,0 +1,17 @@
+skip-check:
+
+  #================================================================================================
+  # Other
+  #================================================================================================
+  # [CKV_TF_1] Ensure Terraform module sources use a commit hash
+  - CKV_TF_1 # This is not required.
+
+  #================================================================================================
+  # Firewall
+  #================================================================================================
+  # [CKV_AZURE_216] Ensure DenyIntelMode is set to Deny for Azure Firewalls
+  - CKV_AZURE_216 # This is not available; higher sku tiers only.
+  # [CKV_AZURE_219] Ensure Firewall defines a firewall policy
+  - CKV_AZURE_219 # FALSE POSITIVE - a firewall policy is defined.
+  # [CKV_AZURE_220] Ensure Firewall policy has IDPS mode as deny
+  - CKV_AZURE_220 # This is not available; higher sku tiers only.

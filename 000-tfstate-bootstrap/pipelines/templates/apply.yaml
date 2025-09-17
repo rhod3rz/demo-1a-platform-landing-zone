@@ -1,0 +1,206 @@
+# PER PROJECT / REPO UPDATES REQUIRED: NONE
+
+parameters:
+  environment: '' # e.g. nonprod
+  useManagedDevopsPool: ''
+  vmImageName: ''
+  devopsPoolName: ''
+  adoServiceConnection: ''
+
+stages:
+
+#================================================================================================
+# Terraform Init & Plan Stage
+#================================================================================================
+
+- stage: ${{ parameters.environment }}_plan
+
+  jobs:
+
+    - job: terraformInitPlan
+      displayName: Init & Plan
+
+      ${{ if eq(parameters.useManagedDevopsPool, false) }}:
+        pool:
+          vmImage: ${{ parameters.vmImageName }}
+      ${{ else }}:
+        pool:
+          name: ${{ parameters.devopsPoolName }}
+
+      steps:
+
+      # Run before tasks.
+      - template: common-before.yaml
+        parameters:
+          adoServiceConnection: ${{ parameters['adoServiceConnection'] }}
+
+      # Run init & plan tasks.
+      - template: common-init-plan.yaml
+
+      # Run after tasks.
+      - template: common-after.yaml
+
+#================================================================================================
+# Test Stage
+#================================================================================================
+
+- stage: ${{ parameters.environment }}_test
+  dependsOn: ${{ parameters.environment }}_plan
+  condition: succeeded()
+
+  jobs:
+
+    - job: Test
+      displayName: Test
+
+      ${{ if eq(parameters.useManagedDevopsPool, false) }}:
+        pool:
+          vmImage: ${{ parameters.vmImageName }}
+      ${{ else }}:
+        pool:
+          name: ${{ parameters.devopsPoolName }}
+
+      steps:
+
+      # Run tests.
+      - template: common-test.yaml
+
+#================================================================================================
+# Check for DESTROY Changes
+#================================================================================================
+
+- stage: ${{ parameters.environment }}_checkDestroy
+  dependsOn: ${{ parameters.environment }}_test
+  condition: and(succeeded(), eq(dependencies.${{ parameters.environment }}_plan.outputs['terraformInitPlan.plan.destroyWarning'], 'true'))
+
+  jobs:
+
+    - job: checkDestroy
+      displayName: Check For Destroy
+      pool: 'server'
+      timeoutInMinutes: 4320
+
+      steps:
+
+      # Manual step to approve the terraform plan.
+      - task: ManualValidation@1
+        displayName: TF - Manual Validation
+        inputs:
+          notifyUsers: 'first.last@rhod3rz.com'
+          instructions: '⚠️ The plan contains DESTROY; double check before proceeding!'
+          onTimeout: 'reject'
+
+#============================================================================================================
+# Terraform Apply - This Section Is Unique For 000-tfstate-bootstrap And Not The Same For Any Other Pipeline!
+#============================================================================================================
+
+- stage: ${{ parameters.environment }}_apply
+  dependsOn: ${{ parameters.environment }}_checkDestroy
+  condition: and(or(succeeded(), eq(dependencies.${{ parameters.environment }}_checkDestroy.result, 'skipped')), eq(dependencies.${{ parameters.environment }}_plan.outputs['terraformInitPlan.plan.planChanged'], 'true'))
+
+  jobs:
+
+    - deployment: Apply
+      displayName: Apply
+
+      ${{ if eq(parameters.useManagedDevopsPool, false) }}:
+        pool:
+          vmImage: ${{ parameters.vmImageName }}
+      ${{ else }}:
+        pool:
+          name: ${{ parameters.devopsPoolName }}
+
+      environment: "$(repoName)-$(environment)-$(region)"
+
+      strategy:
+        runOnce:
+          deploy:
+
+            steps:
+
+            # Download repo & as it's not automatic for a deployment.
+            - checkout: self
+              displayName: Checkout Repo
+
+            # Run before tasks.
+            - template: common-before.yaml
+              parameters:
+                adoServiceConnection: ${{ parameters['adoServiceConnection'] }}
+
+            # Install specific version of terraform.
+            - task: ms-devlabs.custom-terraform-tasks.custom-terraform-installer-task.TerraformInstaller@1
+              displayName: TF - Install
+              inputs:
+                terraformVersion: $(terraformVersion)
+
+            # Run terraform init.
+            - script: |
+                terraform init -reconfigure \
+                  -backend-config="path=./environments/$(environment)/$(region)/$(environment)-$(region).tfstate"
+              displayName: TF - Init
+
+            # Create the terraform plan.
+            - script: |
+                terraform plan -var-file="environments/$(environment)/$(region)/$(environment)-$(region).tfvars" -out $(environment)-$(region)-tfplan
+              displayName: TF - Plan
+
+            # Run terraform apply.
+            - script: |
+                terraform apply -input=false $(environment)-$(region)-tfplan
+              displayName: TF - Apply
+
+            #================================================================================================
+            # Publish & Commit Terraform State
+            #================================================================================================
+            # Once the apply has ran, because we are using a local state file we need to commit it back to the repo.
+            # We publish it as artifacts first, just incase the pipeline fails and we need to download it.
+
+            # Publish terraform.tfstate.
+            - task: PublishPipelineArtifact@1
+              displayName: TF - terraform.tfstate
+              inputs:
+                targetPath: "./environments/$(environment)/$(region)/$(environment)-$(region).tfstate"
+                artifactName: "$(environment)-$(region).tfstate"
+
+            # Publish terraform.tfstate.backup.
+            - task: PublishPipelineArtifact@1
+              displayName: TF - terraform.tfstate.backup
+              inputs:
+                targetPath: "./environments/$(environment)/$(region)/$(environment)-$(region).tfstate.backup"
+                artifactName: "$(environment)-$(region).tfstate.backup"
+
+            # Set git credentials.
+            - script: |
+                git config --global http.https://dev.azure.com/.extraheader "AUTHORIZATION: bearer $(System.AccessToken)"
+              displayName: STATE - Auth
+
+            # Checkout the main branch to ensure we commit to it.
+            - script: |
+                git fetch origin main
+                git checkout main
+                git pull origin main
+              displayName: STATE - Checkout Main
+
+            # Stage changes.
+            - script: |
+                echo "$(environment).tfstate and $(environment).tfstate.backup last updated at: $(date '+%Y-%m-%d %H:%M')" >> ./environments/$(environment)/$(environment).tfstate.log
+                git add ./environments/$(environment)/$(region)/$(environment)-$(region).tfstate
+                git add ./environments/$(environment)/$(region)/$(environment)-$(region).tfstate.backup
+                git add ./environments/$(environment)/$(region)/$(environment)-$(region).tfstate.log
+                git status
+              displayName: STATE - Stage Changes
+
+            # Commit changes with a message.
+            - script: |
+                git config --global user.email "$(adoServiceConnection)@rhod3rz.com"
+                git config --global user.name "$(adoServiceConnection)"
+                git commit -m "tfstate updated for $(environment)-$(region)"
+              displayName: STATE - Commit
+
+            # Push changes to the repository.
+            - script: |
+                git push origin main
+              displayName: STATE - Push
+
+            # Run after tasks.
+            - template: common-after.yaml

@@ -1,0 +1,5 @@
+rule_collection_name,action,priority,rule_name,source_addresses,source_ip_groups,destination_address,destination_ports,protocols,translated_address,translated_fqdn,translated_port
+nat-jumpbox-windows,Dnat,10000,vm-nteu-jump,"48.209.180.7/32,51.105.10.80/32,51.105.9.17/32",,4.208.29.35,3389,TCP,10.10.4.4,,3389
+nat-jumpbox-linux,Dnat,10100,vm-10-10-4-99,"48.209.180.7/32,51.105.10.80/32,51.105.9.17/32",,4.208.29.35,2201,TCP,10.10.4.99,,22
+nat-jumpbox-linux,Dnat,10100,vm-10-11-3-99,"48.209.180.7/32,51.105.10.80/32,51.105.9.17/32",,4.208.29.35,2202,TCP,10.11.3.99,,22
+nat-jumpbox-linux,Dnat,10100,vm-10-12-3-99,"48.209.180.7/32,51.105.10.80/32,51.105.9.17/32",,4.208.29.35,2203,TCP,10.12.3.99,,22

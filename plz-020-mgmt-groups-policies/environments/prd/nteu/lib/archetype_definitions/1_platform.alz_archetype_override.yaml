@@ -1,0 +1,37 @@
+---
+name: platform_override
+base_archetype: platform
+
+policy_assignments_to_add:
+
+policy_assignments_to_remove:      # These are the ootb policy definitions defined by ALZ.
+                                   # COMMENTING LINES OUT HERE WILL !! INSTALL !! THEM.
+                                   # It's done this way to allow for 'selective' deployment.
+                                   # * = parameters are required in .tfvars.
+                                   # ALZ vs Custom = is it an ootb from alz or a custom created policy.
+                                   # (000) = the number of policies within an assignment; to give appreciation for impact.
+
+  - "DenyAction-DeleteUAMIAMA"     # *ALZ (001) Do not allow deletion of specified resource and resource type (not enabled as doesnt cater for multiple accounts).
+  - "Deploy-MDFC-DefSQL-AMA"       # *ALZ (008) Configure sql vms and arc-enabled sql servers to install microsoft defender for sql and ama with a user-defined la workspace.
+  - "Deploy-VM-ChangeTrack"        # *ALZ (007) Enable changetracking and inventory for virtual machines.
+  - "Deploy-VM-Monitoring"         # *ALZ (007) Enable azure monitor for vms with azure monitoring agent(ama).
+  - "Deploy-vmArc-ChangeTrack"     # *ALZ (006) Enable changetracking and inventory for arc-enabled virtual machines.
+  - "Deploy-vmHybr-Monitoring"     # *ALZ (006) Enable azure monitor for hybrid vms with ama.
+  - "Deploy-VMSS-ChangeTrack"      # *ALZ (007) [Preview]: Enable changetracking and inventory for virtual machine scale sets.
+  - "Deploy-VMSS-Monitoring"       # *ALZ (007) Enable azure monitor for vmss with azure monitoring agent(ama).
+  - "Enable-AUM-CheckUpdates"      # *ALZ (004) Configure periodic checking for missing system updates on azure virtual machines and arc-enabled virtual machines.
+  - "Enforce-ASR"                  # ALZ (006) Enforce enhanced recovery and backup policies.
+  # - "Enforce-GR-KeyVault"        # ALZ (029) Enforce recommended guardrails for azure key vault.
+  # - "Enforce-Subnet-Private"     # ALZ (001) Subnets should be private.
+
+policy_definitions_to_add:
+
+policy_definitions_to_remove:
+
+policy_set_definitions_to_add:
+
+policy_set_definitions_to_remove:
+
+role_definitions_to_add:
+
+role_definitions_to_remove:

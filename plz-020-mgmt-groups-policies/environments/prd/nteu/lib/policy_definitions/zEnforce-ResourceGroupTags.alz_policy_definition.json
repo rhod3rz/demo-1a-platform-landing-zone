@@ -1,0 +1,63 @@
+{
+  "name": "zEnforce-RGTags",
+  "type": "Microsoft.Authorization/policyDefinitions",
+  "properties": {
+    "policyType": "Custom",
+    "mode": "All",
+    "displayName": "Resource groups must have mandatory tagging applied",
+    "description": "Enforce mandatory tags on resource groups",
+    "metadata": {
+      "version": "1.0.0",
+      "category": "Tags"
+    },
+    "parameters": {
+      "effect": {
+        "type": "String",
+        "metadata": {
+          "displayName": "effect"
+        }
+      },
+      "tagOne": {
+        "type": "String",
+        "metadata": {
+          "displayName": "tagOne"
+        }
+      },
+      "tagTwo": {
+        "type": "String",
+        "metadata": {
+          "displayName": "tagTwo"
+        }
+      }
+    },
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Resources/subscriptions/resourceGroups"
+          },
+          {
+            "field": "name",
+            "notLike": "NetworkWatcherRG"
+          },
+          {
+            "anyOf": [
+              {
+                "field": "[concat('tags[', parameters('tagOne'), ']')]",
+                "exists": "false"
+              },
+              {
+                "field": "[concat('tags[', parameters('tagTwo'), ']')]",
+                "exists": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "then": {
+        "effect": "[parameters('effect')]"
+      }
+    }
+  }
+}

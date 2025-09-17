@@ -1,0 +1,48 @@
+---
+name: root_override
+base_archetype: root
+
+policy_assignments_to_add:
+  - "zEnforceMandatoryTags"        # Custom (002) Ensure mandatory tagging is applied to resources and resource groups.
+
+policy_assignments_to_remove:      # These are the ootb policy definitions defined by ALZ.
+                                   # COMMENTING LINES OUT HERE WILL !! INSTALL !! THEM.
+                                   # It's done this way to allow for 'selective' deployment.
+                                   # ALZ vs Custom = is it an ootb from alz or a custom created policy.
+                                   # (000) = the number of policies within an assignment; to give appreciation for impact.
+                                   # * = parameters are required in .tfvars.
+
+  # - "Audit-ResourceRGLocation"   # ALZ (001) Audit resource location matches resource group location.
+  # - "Audit-TrustedLaunch"        # ALZ (002) Audit virtual machines for trusted launch support.
+  # - "Audit-UnusedResources"      # ALZ (004) Unused resources driving cost should be avoided.
+  # - "Audit-ZoneResiliency"       # ALZ (034) Resources should be zone resilient.
+  # - "Deny-Classic-Resources"     # ALZ (001) Not allowed resource types.
+  # - "Deny-UnmanagedDisk"         # ALZ (001) Audit vms that do not use managed disks.
+  # - "Deploy-ASC-Monitoring"      # ALZ (225) Microsoft cloud security benchmark; doesn't deploy anything.
+  # - "Deploy-AzActivity-Log"      # *ALZ (001) Configure azure activity logs to stream to specified log analytics workspace.
+  - "Deploy-Diag-LogsCat"          # *ALZ (069) Enable audit category group resource logging for supported resources to log analytics.
+  - "Deploy-MDEndpoints"           # ALZ (004) [Preview]: Deploy Microsoft Defender for Endpoint agent.
+  - "Deploy-MDEndpointsAMA"        # ALZ (003) Configure multiple microsoft defender for endpoint integration settings with microsoft defender for cloud.
+  - "Deploy-MDFC-Config-H224"      # *ALZ (017) Deploy microsoft defender for cloud configuration.
+  - "Deploy-MDFC-OssDb"            # ALZ (005) Configure advanced threat protection to be enabled on open-source relational databases.
+  - "Deploy-MDFC-SqlAtp"           # ALZ (003) Configure azure defender to be enabled on sql servers and sql managed instances.
+  - "Enforce-ACSB"                 # ALZ (005) Enforce azure compute security benchmark compliance auditing; 'guest configuration'.
+
+policy_definitions_to_add:
+  - "zEnforce-RGTags"              # Custom - Resource groups must have mandatory tagging applied.
+  - "zEnforce-ResourceTags"        # Custom - Resources must have mandatory tagging applied.
+
+policy_definitions_to_remove:
+  # - "None"                       # ALZ - All policy definitions will be installed at the root.
+
+policy_set_definitions_to_add:
+  - "zEnforce-MandatoryTags"       # Custom - Ensure mandatory tagging is applied to resources and resource groups.
+
+policy_set_definitions_to_remove:
+  # - "None"                       # ALZ - All policy set definitions will be installed at the root.
+
+role_definitions_to_add:
+  # - "None"                       # Custom - No custom role definitions required.
+
+role_definitions_to_remove:
+  # - "None"                       # ALZ - All role definitions will be installed at the root.

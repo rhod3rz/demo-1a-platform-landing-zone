@@ -1,0 +1,314 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0" version="28.0.7" pages="3">
+  <diagram name="BOTH" id="F5eQEDtNi3ljLxlwR49b">
+    <mxGraphModel dx="2182" dy="1175" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-50" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="560" width="920" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-49" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="920" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-13" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="80" y="220" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-14" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="280" y="220" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-17" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="80" y="80" width="400" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-1" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;Hub&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="220" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-3" value="&lt;span style=&quot;font-family: &amp;quot;Open Sans&amp;quot;;&quot;&gt;Application&lt;/span&gt;&lt;br style=&quot;font-family: &amp;quot;Open Sans&amp;quot;;&quot;&gt;&lt;span style=&quot;font-family: &amp;quot;Open Sans&amp;quot;;&quot;&gt;Spoke&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-8" value="Management&lt;br&gt;Spoke" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;" parent="1" vertex="1">
+          <mxGeometry x="120" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-18" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0.286;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="EE4L9hA2UAlah8ECeLmq-1" target="EE4L9hA2UAlah8ECeLmq-13" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="430" y="310" as="sourcePoint" />
+            <mxPoint x="480" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-19" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="EE4L9hA2UAlah8ECeLmq-1" target="EE4L9hA2UAlah8ECeLmq-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="430" y="310" as="sourcePoint" />
+            <mxPoint x="480" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-22" value="North&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;Europe&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="80" y="80" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-24" value="Subscription Name: connectivity_&lt;b&gt;nonprd&lt;/b&gt;&lt;div&gt;Service Principal Name: sp_connectivity_&lt;b&gt;nonprd&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="340" y="380" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-25" value="Subscription Name: management_&lt;b&gt;nonprd&lt;/b&gt;&lt;div&gt;Service Principal Name: sp_management_&lt;b&gt;nonprd&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="120" y="440" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-26" value="Subscription Name: application_&lt;b&gt;nonprd&lt;/b&gt;&lt;div&gt;Service Principal Name: sp_application_&lt;b&gt;nonprd&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="560" y="440" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-27" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="720" y="740" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-28" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="80" y="740" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-29" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="520" y="600" width="400" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-30" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="280" y="740" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-31" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="80" y="600" width="400" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-32" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="520" y="740" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" parent="1" source="EE4L9hA2UAlah8ECeLmq-34" target="EE4L9hA2UAlah8ECeLmq-35" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-34" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;Hub&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="220" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-35" value="&lt;font face=&quot;Open Sans&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;Hub&lt;/span&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="660" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-36" value="&lt;span style=&quot;font-family: &amp;quot;Open Sans&amp;quot;;&quot;&gt;Application&lt;/span&gt;&lt;br style=&quot;font-family: &amp;quot;Open Sans&amp;quot;;&quot;&gt;&lt;span style=&quot;font-family: &amp;quot;Open Sans&amp;quot;;&quot;&gt;Spoke&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="780" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-37" value="&lt;span style=&quot;font-family: &amp;quot;Open Sans&amp;quot;;&quot;&gt;Management&lt;/span&gt;&lt;br style=&quot;font-family: &amp;quot;Open Sans&amp;quot;;&quot;&gt;&lt;span style=&quot;font-family: &amp;quot;Open Sans&amp;quot;;&quot;&gt;Spoke&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="560" y="780" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-38" value="Management&lt;br&gt;Spoke" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;" parent="1" vertex="1">
+          <mxGeometry x="120" y="780" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-39" value="&lt;span style=&quot;font-family: &amp;quot;Open Sans&amp;quot;;&quot;&gt;Application&lt;/span&gt;&lt;br style=&quot;font-family: &amp;quot;Open Sans&amp;quot;;&quot;&gt;&lt;span style=&quot;font-family: &amp;quot;Open Sans&amp;quot;;&quot;&gt;Spoke&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="760.5" y="780" width="119" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-40" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0.286;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="EE4L9hA2UAlah8ECeLmq-34" target="EE4L9hA2UAlah8ECeLmq-28" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="430" y="830" as="sourcePoint" />
+            <mxPoint x="480" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-41" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="EE4L9hA2UAlah8ECeLmq-34" target="EE4L9hA2UAlah8ECeLmq-36" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="430" y="830" as="sourcePoint" />
+            <mxPoint x="480" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-42" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0.286;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="720" y="700" as="sourcePoint" />
+            <mxPoint x="620" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-43" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="720" y="700" as="sourcePoint" />
+            <mxPoint x="820" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-44" value="North&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;Europe&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="80" y="600" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-45" value="West&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;Europe&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="810" y="600" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-46" value="Subscription Name: connectivity_&lt;b&gt;prd&lt;/b&gt;&lt;div&gt;Service Principal Name: sp_connectivity_&lt;b&gt;prd&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;align=center;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="340" y="900" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-47" value="Subscription Name: management_&lt;b&gt;prd&lt;/b&gt;&lt;div&gt;Service Principal Name: sp_management_&lt;b&gt;prd&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;align=center;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="120" y="960" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-48" value="Subscription Name: application_&lt;b&gt;prd&lt;/b&gt;&lt;div&gt;Service Principal Name: sp_application_&lt;b&gt;prd&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;align=center;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="560" y="960" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-51" value="NONPRD" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="445" y="40" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EE4L9hA2UAlah8ECeLmq-52" value="PRD" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="445" y="560" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dx1HDeZcsZ097rXH4ODM-1" value="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rotation=0;gradientColor=#223548;strokeColor=none;gradientDirection=east;fillColor=#5b738b;rounded=0;pointerEvents=0;fontFamily=Helvetica;fontSize=16;fontColor=#FFFFFF;spacingTop=4;spacingBottom=4;spacingLeft=4;spacingRight=4;points=[];fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="80" y="330" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dx1HDeZcsZ097rXH4ODM-3" value="2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rotation=0;gradientColor=#223548;strokeColor=none;gradientDirection=east;fillColor=#5b738b;rounded=0;pointerEvents=0;fontFamily=Helvetica;fontSize=16;fontColor=#FFFFFF;spacingTop=4;spacingBottom=4;spacingLeft=4;spacingRight=4;points=[];fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="80" y="850" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dx1HDeZcsZ097rXH4ODM-4" value="3" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rotation=0;gradientColor=#223548;strokeColor=none;gradientDirection=east;fillColor=#5b738b;rounded=0;pointerEvents=0;fontFamily=Helvetica;fontSize=16;fontColor=#FFFFFF;spacingTop=4;spacingBottom=4;spacingLeft=4;spacingRight=4;points=[];fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="520" y="850" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2drCG8RhF5npGHDzCyL_-1" value="&lt;font face=&quot;Open Sans&quot; color=&quot;#000000&quot;&gt;NONPRD environments are not&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Open Sans&quot; color=&quot;#000000&quot;&gt;required across two locations.&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="520" y="80" width="400" height="280" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="wT2mK_qGaoPCHP1l7YiB" name="NONPROD">
+    <mxGraphModel dx="2182" dy="1175" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7jNWbpzFhGhsoTYX2yrK-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="920" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="7jNWbpzFhGhsoTYX2yrK-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="80" y="220" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="7jNWbpzFhGhsoTYX2yrK-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="280" y="220" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="7jNWbpzFhGhsoTYX2yrK-4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="400" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="7jNWbpzFhGhsoTYX2yrK-5" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;Hub&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="220" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7jNWbpzFhGhsoTYX2yrK-6" value="&lt;span style=&quot;font-family: &amp;quot;Open Sans&amp;quot;;&quot;&gt;Application&lt;/span&gt;&lt;br style=&quot;font-family: &amp;quot;Open Sans&amp;quot;;&quot;&gt;&lt;span style=&quot;font-family: &amp;quot;Open Sans&amp;quot;;&quot;&gt;Spoke&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7jNWbpzFhGhsoTYX2yrK-7" value="Management&lt;br&gt;Spoke" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;" vertex="1" parent="1">
+          <mxGeometry x="120" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7jNWbpzFhGhsoTYX2yrK-8" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0.286;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="7jNWbpzFhGhsoTYX2yrK-5" target="7jNWbpzFhGhsoTYX2yrK-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="430" y="310" as="sourcePoint" />
+            <mxPoint x="480" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7jNWbpzFhGhsoTYX2yrK-9" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7jNWbpzFhGhsoTYX2yrK-5" target="7jNWbpzFhGhsoTYX2yrK-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="430" y="310" as="sourcePoint" />
+            <mxPoint x="480" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7jNWbpzFhGhsoTYX2yrK-10" value="North&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;Europe&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7jNWbpzFhGhsoTYX2yrK-11" value="Subscription Name: connectivity_&lt;b&gt;nonprd&lt;/b&gt;&lt;div&gt;Service Principal Name: sp_connectivity_&lt;b&gt;nonprd&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="340" y="380" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7jNWbpzFhGhsoTYX2yrK-12" value="Subscription Name: management_&lt;b&gt;nonprd&lt;/b&gt;&lt;div&gt;Service Principal Name: sp_management_&lt;b&gt;nonprd&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="120" y="440" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7jNWbpzFhGhsoTYX2yrK-13" value="Subscription Name: application_&lt;b&gt;nonprd&lt;/b&gt;&lt;div&gt;Service Principal Name: sp_application_&lt;b&gt;nonprd&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="560" y="440" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7jNWbpzFhGhsoTYX2yrK-14" value="NONPRD" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="445" y="40" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7jNWbpzFhGhsoTYX2yrK-15" value="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rotation=0;gradientColor=#223548;strokeColor=none;gradientDirection=east;fillColor=#5b738b;rounded=0;pointerEvents=0;fontFamily=Helvetica;fontSize=16;fontColor=#FFFFFF;spacingTop=4;spacingBottom=4;spacingLeft=4;spacingRight=4;points=[];fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="330" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7jNWbpzFhGhsoTYX2yrK-16" value="&lt;font face=&quot;Open Sans&quot; color=&quot;#000000&quot;&gt;NONPRD environments are not&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Open Sans&quot; color=&quot;#000000&quot;&gt;required across two locations.&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="520" y="80" width="400" height="280" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="0C9Uj0xX1xxWX7QTc9ol" name="PROD">
+    <mxGraphModel dx="2182" dy="1175" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="920" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="720" y="220" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="80" y="220" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="520" y="80" width="400" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-5" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="280" y="220" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-6" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="400" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-7" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="520" y="220" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="fN8FB-xbYuPLj10XGOdb-9" target="fN8FB-xbYuPLj10XGOdb-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-9" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;Hub&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="220" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-10" value="&lt;font face=&quot;Open Sans&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;Hub&lt;/span&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-11" value="&lt;span style=&quot;font-family: &amp;quot;Open Sans&amp;quot;;&quot;&gt;Application&lt;/span&gt;&lt;br style=&quot;font-family: &amp;quot;Open Sans&amp;quot;;&quot;&gt;&lt;span style=&quot;font-family: &amp;quot;Open Sans&amp;quot;;&quot;&gt;Spoke&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-12" value="&lt;span style=&quot;font-family: &amp;quot;Open Sans&amp;quot;;&quot;&gt;Management&lt;/span&gt;&lt;br style=&quot;font-family: &amp;quot;Open Sans&amp;quot;;&quot;&gt;&lt;span style=&quot;font-family: &amp;quot;Open Sans&amp;quot;;&quot;&gt;Spoke&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-13" value="Management&lt;br&gt;Spoke" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;" vertex="1" parent="1">
+          <mxGeometry x="120" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-14" value="&lt;span style=&quot;font-family: &amp;quot;Open Sans&amp;quot;;&quot;&gt;Application&lt;/span&gt;&lt;br style=&quot;font-family: &amp;quot;Open Sans&amp;quot;;&quot;&gt;&lt;span style=&quot;font-family: &amp;quot;Open Sans&amp;quot;;&quot;&gt;Spoke&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="760.5" y="260" width="119" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-15" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0.286;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="fN8FB-xbYuPLj10XGOdb-9" target="fN8FB-xbYuPLj10XGOdb-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="430" y="310" as="sourcePoint" />
+            <mxPoint x="480" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-16" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fN8FB-xbYuPLj10XGOdb-9" target="fN8FB-xbYuPLj10XGOdb-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="430" y="310" as="sourcePoint" />
+            <mxPoint x="480" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-17" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0.286;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="720" y="180" as="sourcePoint" />
+            <mxPoint x="620" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-18" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="720" y="180" as="sourcePoint" />
+            <mxPoint x="820" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-19" value="North&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;Europe&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-20" value="West&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;Europe&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="810" y="80" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-21" value="Subscription Name: connectivity_&lt;b&gt;prd&lt;/b&gt;&lt;div&gt;Service Principal Name: sp_connectivity_&lt;b&gt;prd&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="340" y="380" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-22" value="Subscription Name: management_&lt;b&gt;prd&lt;/b&gt;&lt;div&gt;Service Principal Name: sp_management_&lt;b&gt;prd&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;align=center;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="120" y="440" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-23" value="Subscription Name: application_&lt;b&gt;prd&lt;/b&gt;&lt;div&gt;Service Principal Name: sp_application_&lt;b&gt;prd&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;align=center;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="560" y="440" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-24" value="PRD" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="445" y="40" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-25" value="2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rotation=0;gradientColor=#223548;strokeColor=none;gradientDirection=east;fillColor=#5b738b;rounded=0;pointerEvents=0;fontFamily=Helvetica;fontSize=16;fontColor=#FFFFFF;spacingTop=4;spacingBottom=4;spacingLeft=4;spacingRight=4;points=[];fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="330" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fN8FB-xbYuPLj10XGOdb-26" value="3" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rotation=0;gradientColor=#223548;strokeColor=none;gradientDirection=east;fillColor=#5b738b;rounded=0;pointerEvents=0;fontFamily=Helvetica;fontSize=16;fontColor=#FFFFFF;spacingTop=4;spacingBottom=4;spacingLeft=4;spacingRight=4;points=[];fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="520" y="330" width="30" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

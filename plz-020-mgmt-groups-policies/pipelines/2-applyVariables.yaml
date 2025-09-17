@@ -1,0 +1,74 @@
+parameters:
+  fullEnvironment: ''
+
+variables:
+
+# nonprd-nteu
+- ${{ if eq(parameters['fullEnvironment'], 'nonprd_nteu') }}:
+  # global
+  - name: subscriptionId
+    value: '21c8877e-a2da-4483-8ada-25856954e76b'
+  - name: environment
+    value: 'nonprd'
+  - name: region
+    value: 'nteu'
+  # terraform
+  - name: tfstateWhitelist
+    value: 'true'
+  - name: tfstateResourceGroup
+    value: 'rg-nonprd-nteu-tfstate'
+  - name: tfstateStorageAccount
+    value: 'sardznonprdnteutfstate'
+  - name: tfstateContainerName
+    value: 'plz-020-mgmt-groups-policies'
+  - name: tfstateKey
+    value: 'nonprd-nteu.tfstate'
+  - name: terraformVersion
+    value: 'latest'
+  # testing
+  - name: runCheckov
+    value: 'true'
+  # compile time parameters
+  - name: useManagedDevopsPool
+    value: 'false'
+  - name: vmImageName
+    value: 'ubuntu-latest'
+  - name: devopsPoolName
+    value: 'mdp-nonprd-nteu'
+  - name: adoServiceConnection
+    value: 'terraform_global_mana_nonprd_01'
+
+# prd-nteu
+- ${{ if eq(parameters['fullEnvironment'], 'prd_nteu') }}:
+  # global
+  - name: subscriptionId
+    value: 'b98b4d5e-8698-478e-a259-068c34a6aded'
+  - name: environment
+    value: 'prd'
+  - name: region
+    value: 'nteu'
+  # terraform
+  - name: tfstateWhitelist
+    value: 'true'
+  - name: tfstateResourceGroup
+    value: 'rg-prd-nteu-tfstate'
+  - name: tfstateStorageAccount
+    value: 'sardzprdnteutfstate'
+  - name: tfstateContainerName
+    value: 'plz-020-mgmt-groups-policies'
+  - name: tfstateKey
+    value: 'prd-nteu.tfstate'
+  - name: terraformVersion
+    value: 'latest'
+  # testing
+  - name: runCheckov
+    value: 'true'
+  # compile time parameters
+  - name: useManagedDevopsPool
+    value: 'false'
+  - name: vmImageName
+    value: 'ubuntu-latest'
+  - name: devopsPoolName
+    value: 'mdp-prd-nteu'
+  - name: adoServiceConnection
+    value: 'terraform_global_mana_prd_01'

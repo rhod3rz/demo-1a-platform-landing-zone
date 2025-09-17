@@ -1,0 +1,85 @@
+parameters:
+  environment: ''
+
+variables:
+
+# nonprd-nteu
+- ${{ if eq(parameters['environment'], 'nonprd_nteu') }}:
+  # global
+  - name: subscriptionId
+    value: '21c8877e-a2da-4483-8ada-25856954e76b'
+  - name: environment
+    value: 'nonprd'
+  - name: region
+    value: 'nteu'
+  - name: repoName
+    value: '000-tfstate-bootstrap'
+  # terraform
+  - name: terraformVersion
+    value: 'latest'
+  # testing
+  - name: runCheckov
+    value: 'true'
+  # compile time parameters
+  - name: useManagedDevopsPool
+    value: 'false'
+  - name: vmImageName
+    value: 'ubuntu-latest'
+  - name: devopsPoolName
+    value: 'mdp-nonprd-nteu'
+  - name: adoServiceConnection
+    value: 'mana_nonprd_01'
+
+# prd-nteu
+- ${{ if eq(parameters['environment'], 'prd_nteu') }}:
+  # global
+  - name: subscriptionId
+    value: 'b98b4d5e-8698-478e-a259-068c34a6aded'
+  - name: environment
+    value: 'prd'
+  - name: region
+    value: 'nteu'
+  - name: repoName
+    value: '000-tfstate-bootstrap'
+  # terraform
+  - name: terraformVersion
+    value: 'latest'
+  # testing
+  - name: runCheckov
+    value: 'true'
+  # compile time parameters
+  - name: useManagedDevopsPool
+    value: 'false'
+  - name: vmImageName
+    value: 'ubuntu-latest'
+  - name: devopsPoolName
+    value: 'mdp-prd-nteu'
+  - name: adoServiceConnection
+    value: 'mana_prd_01'
+
+# prd-wteu
+- ${{ if eq(parameters['environment'], 'prd_wteu') }}:
+  # global
+  - name: subscriptionId
+    value: 'b98b4d5e-8698-478e-a259-068c34a6aded'
+  - name: environment
+    value: 'prd'
+  - name: region
+    value: 'wteu'
+  - name: repoName
+    value: '000-tfstate-bootstrap'
+  # terraform
+  - name: terraformVersion
+    value: 'latest'
+  # testing
+  - name: runCheckov
+    value: 'true'
+  # compile time parameters
+  - name: useManagedDevopsPool
+    value: 'false'
+  - name: vmImageName
+    value: 'ubuntu-latest'
+  - name: devopsPoolName
+    value: 'mdp-prd-wteu'
+  - name: adoServiceConnection
+    value: 'mana_prd_01'

@@ -1,0 +1,71 @@
+{
+  "name": "zEnforce-ResourceTags",
+  "type": "Microsoft.Authorization/policyDefinitions",
+  "properties": {
+    "policyType": "Custom",
+    "mode": "All",
+    "displayName": "Resources must have mandatory tagging applied",
+    "description": "Enforce mandatory tags on resources",
+    "metadata": {
+      "version": "1.0.0",
+      "category": "Tags"
+    },
+    "parameters": {
+      "effect": {
+        "type": "String",
+        "metadata": {
+          "displayName": "effect"
+        }
+      },
+      "tagOne": {
+        "type": "String",
+        "metadata": {
+          "displayName": "tagOne"
+        }
+      },
+      "tagTwo": {
+        "type": "String",
+        "metadata": {
+          "displayName": "tagTwo"
+        }
+      }
+    },
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "notIn": [
+              "microsoft.advisor/recommendations",
+              "microsoft.authorization/roleassignments",
+              "microsoft.compute/virtualmachines/extensions",
+              "microsoft.eventgrid/systemtopics",
+              "microsoft.eventgrid/systemtopics/eventsubscriptions",
+              "microsoft.network/networkwatchers",
+              "microsoft.network/virtualnetworks/subnets",
+              "microsoft.operationalinsights/workspaces/savedsearches",
+              "microsoft.operationalinsights/workspaces/tables",
+              "microsoft.resources/subscriptions/resourcegroups",
+              "microsoft.security/policies"
+            ]
+          },
+          {
+            "anyOf": [
+              {
+                "field": "[concat('tags[', parameters('tagOne'), ']')]",
+                "exists": "false"
+              },
+              {
+                "field": "[concat('tags[', parameters('tagTwo'), ']')]",
+                "exists": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "then": {
+        "effect": "[parameters('effect')]"
+      }
+    }
+  }
+}

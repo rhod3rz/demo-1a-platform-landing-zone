@@ -1,0 +1,49 @@
+trigger:
+  branches:
+    include:
+    - none
+
+pr:
+- none
+
+pool:
+  name: 'mdp-prd-nteu'
+
+jobs:
+
+- job: SelfHostedAgent
+  displayName: Self Hosted Agent
+
+  steps:
+
+    - script: |
+
+        echo "BASIC CHECKS:"
+        echo "-------------"
+        echo "Agent Name: $(Agent.Name)"
+        echo "Agent OS: $(Agent.OS)"
+        echo "Agent Version: $(Agent.Version)"
+        echo
+
+      displayName: Self Hosted Agent
+
+    - script: |
+
+        echo "ADDITIONAL CHECKS:"
+        echo "------------------"
+        echo "Uname Is: $(uname -a)"
+        echo "Current User Is: $(whoami)"
+        echo
+
+        echo "PRIMARY IP ADDRESS:"
+        echo "-------------------"
+        ip addr show eth0 | grep 'inet ' | awk '{print $2}'
+        echo
+
+        echo "EXTERNAL IP"
+        echo "-------------------"
+        external_ip=$(curl -s ifconfig.me)
+        echo "External IP is: $external_ip"
+        echo
+
+      displayName: Additional Checks

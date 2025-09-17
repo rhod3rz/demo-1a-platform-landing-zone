@@ -1,0 +1,29 @@
+---
+name: identity_override
+base_archetype: identity
+
+policy_assignments_to_add:
+
+policy_assignments_to_remove:      # These are the ootb policy definitions defined by ALZ.
+                                   # COMMENTING LINES OUT HERE WILL !! INSTALL !! THEM.
+                                   # It's done this way to allow for 'selective' deployment.
+                                   # * = parameters are required in .tfvars.
+                                   # ALZ vs Custom = is it an ootb from alz or a custom created policy.
+                                   # (000) = the number of policies within an assignment; to give appreciation for impact.
+
+  # - "Deny-MgmtPorts-Internet"    # ALZ (001) Management port access from the internet should be blocked.
+  # - "Deny-Public-IP"             # ALZ (001) Deny the creation of public ip.
+  # - "Deny-Subnet-Without-Nsg"    # ALZ (001) Subnets should have a network security group.
+  - "Deploy-VM-Backup"             # *ALZ (001) Configure backup on virtual machines without a given tag to a new recovery services vault with a default policy.
+
+policy_definitions_to_add:
+
+policy_definitions_to_remove:
+
+policy_set_definitions_to_add:
+
+policy_set_definitions_to_remove:
+
+role_definitions_to_add:
+
+role_definitions_to_remove:

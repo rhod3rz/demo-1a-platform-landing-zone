@@ -1,0 +1,49 @@
+skip-check:
+
+  #================================================================================================
+  # Management
+  #================================================================================================
+  # [CKV_TF_1] Ensure Terraform module sources use a commit hash
+  - CKV_TF_1 # This is not required in nonprod.
+
+  #================================================================================================
+  # Automation Accounts
+  #================================================================================================
+  # [CKV2_AZURE_24] Ensure Azure automation account does NOT have overly permissive network access
+  - CKV2_AZURE_24 # FALSE POSITIVE - public network access is disabled.
+
+  #================================================================================================
+  # Key Vaults
+  #================================================================================================
+  # [CKV_AZURE_42] Ensure the key vault is recoverable
+  - CKV_AZURE_42 # This is not required.
+  # [CKV_AZURE_109] Ensure that key vault allows firewall rules settings
+  - CKV_AZURE_109 # FALSE POSITIVE - the firewall is enabled and rules are set.
+  # [CKV_AZURE_110] Ensure that key vault enables purge protection
+  - CKV_AZURE_110 # This is not required.
+  # [CKV_AZURE_112] Ensure that key vault key is backed by HSM
+  - CKV_AZURE_112 # There is no design requirement for HSM.
+  # [CKV2_AZURE_32] Ensure private endpoint is configured to key vault
+  - CKV2_AZURE_32 # Private endpoint will be enabled once mdp is available.
+
+  #================================================================================================
+  # Storage Accounts
+  #================================================================================================
+  # [CKV_AZURE_33] Ensure Storage logging is enabled for Queue service for read, write and delete requests
+  - CKV_AZURE_33 # This is not required.
+  # [CKV_AZURE_35] Ensure default network access rule for Storage Accounts is set to deny
+  - CKV_AZURE_35 # FALSE POSITIVE - default network access rule for Storage Accounts is set to deny.
+  # [CKV_AZURE_36] Ensure 'Trusted Microsoft Services' is enabled for Storage Account access
+  - CKV_AZURE_36 # FALSE POSITIVE - 'Trusted Microsoft Services' is enabled.
+  # [CKV_AZURE_59] Ensure that Storage accounts disallow public access
+  - CKV_AZURE_59 # FALSE POSITIVE - storage accounts disallow public access.
+  # [CKV_AZURE_206] Ensure that Storage Accounts use replication
+  - CKV_AZURE_206 # Replication is not required.
+  # [CKV_AZURE_244] Avoid the use of local users for Azure Storage unless necessary
+  - CKV_AZURE_244 # FALSE POSITIVE - local users are not enabled.
+  # [CKV2_AZURE_1] Ensure storage for critical data are encrypted with Customer Managed Key
+  - CKV2_AZURE_1 # There is no design requirement for this item.
+  # [CKV2_AZURE_33] Ensure storage account is configured with private endpoint
+  - CKV2_AZURE_33 # Private endpoint will be enabled once mdp is available.
+  # [CKV2_AZURE_38] Ensure soft-delete is enabled on Azure storage account
+  - CKV2_AZURE_38 # FALSE POSITIVE - soft-delete is enabled on Azure storage account.

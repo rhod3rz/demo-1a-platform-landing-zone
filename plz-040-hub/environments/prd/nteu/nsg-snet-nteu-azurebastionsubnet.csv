@@ -1,0 +1,12 @@
+name,priority,direction,access,protocol,source_port_range,source_port_ranges,destination_port_range,destination_port_ranges,source_address_prefix,source_address_prefixes,source_application_security_group_ids,destination_address_prefix,destination_address_prefixes,destination_application_security_group_ids,description
+AllowHttpsInBound,500,Inbound,Allow,Tcp,*,,443,,Internet,,,*,,,
+AllowGatewayManagerInBound,510,Inbound,Allow,Tcp,*,,443,,GatewayManager,,,*,,,
+AllowLoadBalancerInBound,520,Inbound,Allow,Tcp,*,,443,,AzureLoadBalancer,,,*,,,
+AllowBastionHostCommunicationInBound,530,Inbound,Allow,Tcp,*,,,"5701,8080",VirtualNetwork,,,VirtualNetwork,,,
+DenyAllInBound,1000,Inbound,Deny,*,*,,*,,*,,,*,,,
+AllowSshOutBound,500,Outbound,Allow,Tcp,*,,22,,*,,,VirtualNetwork,,,
+AllowRdpOutBound,510,Outbound,Allow,Tcp,*,,3389,,*,,,VirtualNetwork,,,
+AllowAzureCloudCommunicationOutBound,520,Outbound,Allow,Tcp,*,,443,,*,,,AzureCloud,,,
+AllowBastionHostCommunicationOutBound,530,Outbound,Allow,*,*,,,"5701,8080",VirtualNetwork,,,VirtualNetwork,,,
+AllowGetSessionInformationOutBound,540,Outbound,Allow,*,*,,,"80,443",*,,,Internet,,,
+DenyAllOutBound,1000,Outbound,Deny,*,*,,*,,*,,,*,,,

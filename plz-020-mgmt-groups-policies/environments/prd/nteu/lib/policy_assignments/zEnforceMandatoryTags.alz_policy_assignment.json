@@ -1,0 +1,34 @@
+{
+  "type": "Microsoft.Authorization/policyAssignments",
+  "apiVersion": "2021-06-01",
+  "name": "zEnforceMandatoryTags",
+  "dependsOn": [],
+  "properties": {
+    "displayName": "Ensure mandatory tagging is applied to resources and resource groups",
+    "description": "Contains the core tagging policies",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/zEnforce-MandatoryTags",
+    "enforcementMode": "Default",
+    "nonComplianceMessages": [
+      {
+        "message": "Mandatory tags must be applied: * Environment * Owner *"
+      }
+    ],
+    "parameters": {
+      "effect": {
+        "value": "Audit"
+      },
+      "tagOne": {
+        "value": "environment"
+      },
+      "tagTwo": {
+        "value": "owner"
+      }
+    },
+    "scope": "${current_scope_resource_id}",
+    "notScopes": []
+  },
+  "location": "${default_location}",
+  "identity": {
+    "type": "None"
+  }
+}
