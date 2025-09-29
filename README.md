@@ -26,12 +26,15 @@ The solution aligns with Microsoft's **Cloud Adoption Framework (CAF)** and incl
 - **Private DNS Zones** and **Private Endpoints** for secure service access.
 - **Azure Firewall** for outbound control and logging.
 - **NAT Gateway** used where appropriate for egress management.
+- **Network Policies inside AKS** to isolate east-west pod traffic.
 
 ### 📦 Platform & Application Hosting
 - **Azure Kubernetes Service (AKS)** clusters in North and West Europe.
 - **West Europe** acts as a **Standby Region** - an AKS cluster can be spun up rapidly for failover if required.
 - **AKS Networking Mode** is configurable between **Azure CNI Overlay**, **Pod Subnet**, and **Node Subnet** models, depending on IP requirements.
 - **Blue/Green AKS Clusters** with traffic routing managed via **Azure Front Door** for zero-downtime deployments.
+- **Node Pool Design** with separate System and User pools, autoscaling enabled.
+- **Workload Scaling** HPA/VPA + Cluster Autoscaler working together.
 - **Application Gateway for Containers (AGC)** for secure, scalable ingress.
 - **Azure Front Door** also serves as the global entry point, offering WAF and cross-region traffic control.
 - **Key Vault Integration** enables AKS workloads to securely consume secrets via CSI driver and workload identity.
@@ -45,9 +48,12 @@ The solution aligns with Microsoft's **Cloud Adoption Framework (CAF)** and incl
 - **Management Groups** aligned to CAF hierarchy for RBAC and policy inheritance.
 
 ### 🔐 Governance & Security
-- **Azure Policy** initiatives for compliance.
+- **Azure Policy Guardrails** aligned to Azure Landing Zones best practice, enforcing resource compliance.
 - **Role-Based Access Control (RBAC)** implemented across Azure scopes and integrated with **Azure AD** for Kubernetes-level access control within AKS.
 - **Checkov** to analyse Terraform configurations for misconfigurations and security issues.
+- **Private Endpoints** enforced for all PaaS Services (ACR, Key Vault, Storage, AKS API) - no public access.
+- **Azure Container Registry (ACR)** with vulnerability scanning and signed image provenance.
+- **Workload Identity** for AKS pods eliminating the need for static secrets or service principal credentials.
 
 ### 📈 Monitoring & Operations
 - **Log Analytics Workspaces** for centralised logging and metrics.

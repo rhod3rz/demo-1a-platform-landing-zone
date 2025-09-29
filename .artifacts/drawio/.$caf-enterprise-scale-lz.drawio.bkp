@@ -1,6 +1,6 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.1.2 Chrome/138.0.7204.243 Electron/37.4.0 Safari/537.36" version="28.1.2" pages="3">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0" version="28.0.7" pages="3">
   <diagram id="LGCKhvl_WTCX13LRuhdG" name="Full">
-    <mxGraphModel dx="3385" dy="1039" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="3747" dy="1389" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -61,7 +61,7 @@
         <mxCell id="97rPH4XX8lSVOOVF8Yqk-1" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;dashed=1;strokeColor=#3399FF;fillColor=none;arcSize=2;fontSize=10;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;labelBackgroundColor=#FFF2CC;" parent="1" vertex="1">
           <mxGeometry x="-760" y="305" width="200" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="yIE9a9HYL6za6UvqL1pY-14" value="Private DNS&lt;br&gt;Zones" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/DNS_Private_Resolver.svg;labelPosition=center;verticalLabelPosition=top;verticalAlign=bottom;imageBackground=none;labelBackgroundColor=#FFF2CC;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;" parent="1" vertex="1">
+        <mxCell id="yIE9a9HYL6za6UvqL1pY-14" value="&lt;span style=&quot;&quot;&gt;Global&lt;br&gt;Private DNS&lt;/span&gt;" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/DNS_Private_Resolver.svg;labelPosition=center;verticalLabelPosition=top;verticalAlign=bottom;imageBackground=none;labelBackgroundColor=#FFF2CC;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;" parent="1" vertex="1">
           <mxGeometry x="-308.5" y="138" width="37" height="30" as="geometry" />
         </mxCell>
         <mxCell id="yIE9a9HYL6za6UvqL1pY-16" value="law-prd-nteu" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/analytics/Log_Analytics_Workspaces.svg;labelPosition=center;verticalLabelPosition=top;verticalAlign=bottom;labelBackgroundColor=#D5E8D4;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;" parent="1" vertex="1">
@@ -623,9 +623,6 @@
         </mxCell>
         <mxCell id="DOC7a5xI_jTG3l_dLT7q-41" value="agfc-prd-wteu-grn" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Application_Gateway.svg;labelBackgroundColor=#DAE8FC;fontFamily=Open Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DOpen%2BSans;labelPosition=center;verticalLabelPosition=top;verticalAlign=bottom;fontColor=#999999;" parent="1" vertex="1">
           <mxGeometry x="693" y="1021" width="40" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="SCRWfLjIoKqJs666dHLm-1" value="&lt;div style=&quot;font-family: &amp;quot;Open Sans&amp;quot;;&quot;&gt;Public DNS&lt;br&gt;Zones&lt;/div&gt;" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/DNS_Zones.svg;labelPosition=center;verticalLabelPosition=top;verticalAlign=bottom;labelBackgroundColor=#F5F5F5;" vertex="1" parent="1">
-          <mxGeometry x="-150" y="830" width="40" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
